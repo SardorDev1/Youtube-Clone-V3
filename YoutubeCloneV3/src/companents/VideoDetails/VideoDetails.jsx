@@ -34,7 +34,7 @@ export default function VideoDetails() {
       setVideoDetail(data.items[0])
       const ReData = await APIService.fetching(`/search?part=snippet&relatedToVideoId=${id}&type=video`)
       setRelatedVideos(ReData.items)
-      console.log(ReData.items);
+   
       const commentData = await APIService.fetching(`/commentThreads?part=snippet&videoId=${id}`)
       setComments(commentData.items)
     }
